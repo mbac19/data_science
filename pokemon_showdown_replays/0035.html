@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html><head>
+
+	<meta charset="utf-8" />
+
+	<title>Replays - Pok&eacute;mon Showdown</title>
+
+	<meta name="description" content="Watch replays of battles on Pokémon Showdown!" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/font-awesome.css?932f42c7" />
+	<link rel="stylesheet" href="//pokemonshowdown.com/theme/panels.css?0.2313253596849809" />
+	<link rel="stylesheet" href="//pokemonshowdown.com/theme/main.css?0.47169413559005613" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/battle.css?f1b31d7c" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/replay.css?cfa51183" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/utilichart.css?e39c48cf" />
+
+	<!-- Workarounds for IE bugs to display trees correctly. -->
+	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
+	<!--[if IE 7]><style> li.tree { zoom: 1; } </style><![endif]-->
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-26211653-1']);
+		_gaq.push(['_setDomainName', 'pokemonshowdown.com']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head><body>
+
+	<div class="pfx-topbar">
+		<div class="header">
+			<ul class="nav">
+				<li><a class="button nav-first" href="//pokemonshowdown.com/?0.026720567736561174"><img src="//pokemonshowdown.com/images/pokemonshowdownbeta.png?0.34129063389530967" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
+				<li><a class="button" href="//dex.pokemonshowdown.com/?0.6194591294571221">Pok&eacute;dex</a></li>
+				<li><a class="button cur" href="/?0.7662613456557061">Replays</a></li>
+				<li><a class="button" href="//pokemonshowdown.com/ladder/?0.4953552654239717">Ladder</a></li>
+				<li><a class="button nav-last" href="//pokemonshowdown.com/forums/?0.8197716973863713">Forum</a></li>
+			</ul>
+			<ul class="nav nav-play">
+				<li><a class="button greenbutton nav-first nav-last" href="http://play.pokemonshowdown.com/">Play</a></li>
+			</ul>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+	<div class="pfx-panel"><div class="pfx-body pfx-body-padded">
+		<h1>Upload replays</h1>
+		<p>
+			To upload a replay, click "Share" or use the command <code>/savereplay</code> in a Pok&eacute;mon Showdown battle!
+		</p>
+		<h1>Search replays</h1>
+		<!--p>Username search temporarily down, will be back up soon</p-->
+		<form action="/search/" method="get" data-target="replace">
+			<p style="text-align:center">
+				<label><input type="text" name="user" class="textbox" placeholder="Username" size="24" /></label>
+				<button type="submit"><strong>Search for user</strong></button>
+			</p>
+		</form>
+		<form action="/search/" method="get" data-target="replace">
+			<p style="text-align:center">
+				<label><input type="text" name="format" class="textbox" placeholder="Format" size="24" /></label>
+				<button type="submit"><strong>Search by format</strong></button>
+			</p>
+		</form>
+		<h1>Featured replays</h1>
+		<ul class="linklist" style="max-width:480px;margin:0 auto;text-align:center">
+			<h3>Fun</h3>
+			<li><a href="/oumonotype-82345404" data-target="push">
+				<small>[oumonotype]<br /></small>
+				<strong>kdarewolf</strong> vs. <strong>Onox</strong>
+				<small><br />Protean + prediction</small>
+			</a></li>
+			<li><a href="/anythinggoes-218380995" data-target="push">
+				<small>[anythinggoes]<br /></small>
+				<strong>Anta2</strong> vs. <strong>dscottnew</strong>
+				<small><br />Cheek Pouch</small>
+			</a></li>
+			<li><a href="/uberssuspecttest-147833524" data-target="push">
+				<small>[ubers]<br /></small>
+				<strong>Metal Brellow</strong> vs. <strong>zig100</strong>
+				<small><br />Topsy-Turvy</small>
+			</a></li>
+			<li><button class="button" onclick="$('.older2').show();$(this).parent().hide()">Older</button></li>
+			<li class="older2" style="display:none"><a href="/smogondoubles-75588440" data-target="push">
+				<small>[smogondoubles]<br /></small>
+				<strong>jamace6</strong> vs. <strong>DubsWelder</strong>
+				<small><br />Garchomp sweeps 11 pokemon</small>
+			</a></li>
+			<li class="older2" style="display:none"><a href="/ou-20651579" data-target="push">
+				<small>[ou]<br /></small>
+				<strong>RainSeven07</strong> vs. <strong>my body is regi</strong>
+				<small><br />An entire team based on Assist V-create</small>
+			</a></li>
+			<li class="older2" style="display:none"><a href="/balancedhackmons7322360" data-target="push">
+				<small>[balancedhackmons]<br /></small>
+				<strong>a ver</strong> vs. <strong>Shuckie</strong>
+				<small><br />To a ver's frustration, PP stall is viable in Balanced Hackmons</small>
+			</a></li>
+			<h3>Competitive</h3>
+			<li><a href="/doublesou-232753081" data-target="push" style="white-space:normal">
+			<small>[doubles ou]<br /></small>
+			<strong>Electrolyte</strong> vs. <strong>finally</strong>
+			<small><br />finally steals Electrolyte's spot in the finals of the Doubles Winter Seasonal by outplaying Toxic Aegislash.</small>
+			</a></li>
+			<li><a href="/smogtours-gen5ou-59402" data-target="push" style="white-space:normal">
+			<small>[bw ou]<br /></small>
+			<strong>Reymedy</strong> vs. <strong>Leftiez</strong>
+			<small><br />Reymedy's superior grasp over BW OU lead to his claim of victory over Leftiez in the No Johns Tournament.</small>
+			</a></li>
+			<li><a href="/smogtours-gen3ou-56583" data-target="push" style="white-space:normal">
+			<small>[adv ou]<br /></small>
+			<strong>pokebasket</strong> vs. <strong>Alf'</strong>
+			<small><br />pokebasket proved Blissey isn't really one to take a Focus Punch well in his victory match over Alf' in the Fuck Trappers ADV OU tournament.</small>
+			</a></li>
+			<li><a href="/smogtours-ou-55891" data-target="push" style="white-space:normal">
+			<small>[oras ou]<br /></small>
+			<strong>Marshall.Law</strong> vs. <strong>Malekith</strong>
+			<small><br />In a "match full of reverses", Marshall.Law takes on Malekith in the finals of It's No Use.</small>
+			</a></li>
+			<li><a href="/smogtours-ubers-54583" data-target="push" style="white-space:normal">
+				<small>[custom]<br /></small>
+				<strong>hard</strong> vs. <strong>panamaxis</strong>
+				<small><br />Dark horse panamaxis proves his worth as the rightful winner of The Walkthrough Tournament in this exciting final versus hard.</small>
+			</a></li>
+			<li><button class="button" onclick="$('.older1').show();$(this).parent().hide()">Older</button></li>
+			<li class="older1" style="display:none"><a href="/smogtours-ubers-34646" data-target="push" style="white-space:normal">
+				<small>[oras ubers]<br /></small>
+				<strong>steelphoenix</strong> vs. <strong>Jibaku</strong>
+				<small><br />In this SPL Week 4 battle, Jibaku's clever plays with Mega Sableye keep the momentum mostly in his favor.</small>
+			</a></li>
+			<li class="older1" style="display:none"><a href="/smogtours-uu-36860" data-target="push" style="white-space:normal">
+				<small>[oras uu]<br /></small>
+				<strong>IronBullet93</strong> vs. <strong>Laurel</strong>
+				<small><br />Laurel outplays IronBullet's Substitute Tyrantrum with the sly use of a Shuca Berry Cobalion, but luck was inevitably the deciding factor in this SPL Week 6 match.</small>
+			</a></li>
+			<li class="older1" style="display:none"><a href="/smogtours-gen5ou-36900" data-target="push" style="white-space:normal">
+				<small>[bw ou]<br /></small>
+				<strong>Lowgock</strong> vs. <strong>Meridian</strong>
+				<small><br />This SPL Week 6 match features impressive plays, from Jirachi sacrificing itself to paralysis to avoid a burn to some clever late-game switches.</small>
+			</a></li>
+			<li class="older1" style="display:none"><a href="/smogtours-gen4ou-36782" data-target="push" style="white-space:normal">
+				<small>[dpp ou]<br /></small>
+				<strong>Heist</strong> vs. <strong>liberty32</strong>
+				<small><br />Starting out as an entry hazard-filled stallfest, this close match is eventually decided by liberty32's efficient use of Aerodactyl.</small>
+			</a></li>
+			<li class="older1" style="display:none"><a href="/randombattle-213274483" data-target="push" style="white-space:normal">
+				<small>[randombattle]<br /></small>
+				<strong>The Immortal</strong> vs. <strong>Amphinobite</strong>
+				<small><br />Substitute Lugia and Rotom-Fan take advantage of Slowking's utility and large HP stat, respectively, in this high ladder match.</small>
+			</a></li>
+		</ul>
+		<h1>Recent replays</h1>
+		<ul class="linklist" style="max-width:480px;margin:0 auto;text-align:center">
+		<li><a href="/gen8joltemonsrandombattle-1731848936" data-target="push"><small>[gen8joltemonsrandombattle]<br /></small> <strong>gokussjb2</strong> vs. <strong>beibkk0</strong></a></li>
+		<li><a href="/gen8anythinggoes-1731839996" data-target="push"><small>[gen8anythinggoes]<br /></small> <strong>TrainerKomo</strong> vs. <strong>ShadowKyubi10</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731853846" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>testing a funni2</strong> vs. <strong>mfsa3004</strong></a></li>
+		<li><a href="/gen9hackmonscup-1731855470" data-target="push"><small>[gen9hackmonscup]<br /></small> <strong>Hilbyjoe</strong> vs. <strong>IlTapuGomez</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731851411" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Landri</strong> vs. <strong>Fizzy1404</strong></a></li>
+		<li><a href="/gen8randombattle-1731845161" data-target="push"><small>[gen8randombattle]<br /></small> <strong>Mouse9291</strong> vs. <strong>Frygddgv</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731847117" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>SorrowfulAJ</strong> vs. <strong>Band stand76</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731847634" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>SexPleto</strong> vs. <strong>Chocolat_Gelatto</strong></a></li>
+		<li><a href="/gen8anythinggoes-1731850030" data-target="push"><small>[gen8anythinggoes]<br /></small> <strong>KnightBlade786</strong> vs. <strong>daddymisswar</strong></a></li>
+		<li><a href="/gen9uu-1731854642" data-target="push"><small>[gen9uu]<br /></small> <strong>cesto</strong> vs. <strong>ModsAreVirginNerds</strong></a></li>
+		<li><a href="/gen7ou-1731837760" data-target="push"><small>[gen7ou]<br /></small> <strong>CrushDragonGandora</strong> vs. <strong>WishIWasPro</strong></a></li>
+		<li><a href="/gen9ou-1731847731" data-target="push"><small>[gen9ou]<br /></small> <strong>inkmyskin</strong> vs. <strong>retalixsucks ❤</strong></a></li>
+<h3>1 minute ago</h3>		<li><a href="/gen9vgc2023series1-1731853130" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>DrZoidbergMD</strong> vs. <strong>Mattack10</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731851840" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Nyny12</strong> vs. <strong>Asd4321</strong></a></li>
+		<li><a href="/gen9anythinggoes-1731852368" data-target="push"><small>[gen9anythinggoes]<br /></small> <strong>saeso</strong> vs. <strong>LucasOduncu</strong></a></li>
+		<li><a href="/gen8randombattle-1731854328" data-target="push"><small>[gen8randombattle]<br /></small> <strong>MegaSolos</strong> vs. <strong>spidrr3</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731850706" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Duck duty</strong> vs. <strong>IviRios</strong></a></li>
+<h3>2 minutes ago</h3>		<li><a href="/gen9vgc2023series1-1731851730" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>monster_papaya</strong> vs. <strong>MClassyWolf</strong></a></li>
+		<li><a href="/gen8randombattle-1731851815" data-target="push"><small>[gen8randombattle]<br /></small> <strong>cybermo95</strong> vs. <strong>Itstonez</strong></a></li>
+		<li><a href="/gen9ou-1731847672" data-target="push"><small>[gen9ou]<br /></small> <strong>Salfy</strong> vs. <strong>Snapteryx</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731852350" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Code Vermillion</strong> vs. <strong>joe whisperer</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731841499" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>Amongusnowgaming</strong> vs. <strong>ShianaMiya</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731852475" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>fgvfgfdhgfh</strong> vs. <strong>Mrhehehehaw</strong></a></li>
+		<li><a href="/gen9ou-1731850463" data-target="push"><small>[gen9ou]<br /></small> <strong>ilpicciotto</strong> vs. <strong>werthrt</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731843887" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Just_Mef</strong> vs. <strong>Tato's Life</strong></a></li>
+		<li><a href="/gen8randomdoublesbattle-1731848853" data-target="push"><small>[gen8randomdoublesbattle]<br /></small> <strong>hxyude</strong> vs. <strong>afsefsf</strong></a></li>
+		<li><a href="/gen8challengecup1v1-1731852789" data-target="push"><small>[gen8challengecup1v1]<br /></small> <strong>Incelpinder</strong> vs. <strong>ChokeinderSingh</strong></a></li>
+<h3>3 minutes ago</h3>		<li><a href="/dawn-gen9customgame-167788" data-target="push"><small>[gen9customgame - dawn]<br /></small> <strong>Paracosmic</strong> vs. <strong>Sci0n 0f Light</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731848024" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Mister Fluff</strong> vs. <strong>carmelo.cristiano</strong></a></li>
+		<li><a href="/gen9ou-1731847792" data-target="push"><small>[gen9ou]<br /></small> <strong>bunnylaffs</strong> vs. <strong>Tripledeluxer</strong></a></li>
+		<li><a href="/gen8ou-1731843464" data-target="push"><small>[gen8ou]<br /></small> <strong>Donopan</strong> vs. <strong>Matak1</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731848145" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>TheWaddleZee</strong> vs. <strong>gurkel</strong></a></li>
+		<li><a href="/gen9nationaldex-1731846636" data-target="push"><small>[gen9nationaldex]<br /></small> <strong>applesaucething&gt;_&gt;</strong> vs. <strong>Crabludio</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731849506" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Dot1Q</strong> vs. <strong>Awesome Person III</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731848419" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>Danimoshi2</strong> vs. <strong>HesperC126</strong></a></li>
+		<li><a href="/gen8doubleshackmonscup-1731834505" data-target="push"><small>[gen8doubleshackmonscup]<br /></small> <strong>king bill the 3rd</strong> vs. <strong>sneakyshark1315</strong></a></li>
+		<li><a href="/gen9ou-1731845052" data-target="push"><small>[gen9ou]<br /></small> <strong>Blyatmakker33</strong> vs. <strong>pss7</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731851198" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>VeganMilkk</strong> vs. <strong>testing a funni2</strong></a></li>
+		<li><a href="/gen9ou-1731847154" data-target="push"><small>[gen9ou]<br /></small> <strong>Accelgor321</strong> vs. <strong>pwieruu</strong></a></li>
+		<li><a href="/gen9nationaldex-1731848280" data-target="push"><small>[gen9nationaldex]<br /></small> <strong>rvevrtbmion</strong> vs. <strong>cyc2002</strong></a></li>
+		<li><a href="/gen9nationaldexag-1731847728" data-target="push"><small>[gen9nationaldexag]<br /></small> <strong>Void Puppeteer</strong> vs. <strong>fearsoWtb</strong></a></li>
+<h3>4 minutes ago</h3>		<li><a href="/gen8anythinggoes-1731845730" data-target="push"><small>[gen8anythinggoes]<br /></small> <strong>TrainerKomo</strong> vs. <strong>Edu38788</strong></a></li>
+		<li><a href="/gen9hackmonscup-1731843925" data-target="push"><small>[gen9hackmonscup]<br /></small> <strong>mf10068123</strong> vs. <strong>G.Do42069</strong></a></li>
+		<li><a href="/gen9paldeadexdraft-1731838954" data-target="push"><small>[gen9paldeadexdraft]<br /></small> <strong>Kipkluif</strong> vs. <strong>Fant'sy Beast</strong></a></li>
+		<li><a href="/gen9vgc2023series1-1731850945" data-target="push"><small>[gen9vgc2023series1]<br /></small> <strong>Mr-Mongol</strong> vs. <strong>NehzzyTTV</strong></a></li>
+		<li><a href="/gen9nationaldexmonotype-1731847265" data-target="push"><small>[gen9nationaldexmonotype]<br /></small> <strong>Select Player Name</strong> vs. <strong>KaosPopRevived</strong></a></li>
+		<li><a href="/gen9ou-1731846629" data-target="push"><small>[gen9ou]<br /></small> <strong>mman47</strong> vs. <strong>TortueCarnivore</strong></a></li>
+<h3>5 minutes ago</h3>		<li><a href="/gen8randombattle-1731848061" data-target="push"><small>[gen8randombattle]<br /></small> <strong>bodob the great</strong> vs. <strong>i report furries</strong></a></li>
+		<li><a href="/gen9uu-1731847410" data-target="push"><small>[gen9uu]<br /></small> <strong>GryphonEx</strong> vs. <strong>standard gen8</strong></a></li>
+		<li><a href="/gen8monotyperandombattle-1731849960" data-target="push"><small>[gen8monotyperandombattle]<br /></small> <strong>Incelpinder</strong> vs. <strong>ChokeinderSingh</strong></a></li>
+		</ul>
+	</div></div>
+
+	<script src="//play.pokemonshowdown.com/js/lib/jquery-1.11.0.min.js?8fc25e27"></script>
+	<script src="//play.pokemonshowdown.com/js/lib/lodash.core.js?e9be4c2d"></script>
+	<script src="//play.pokemonshowdown.com/js/lib/backbone.js?8a8d8296"></script>
+	<script src="//dex.pokemonshowdown.com/js/panels.js?0.6967441331267152"></script>
+
+	<script src="//play.pokemonshowdown.com/js/lib/jquery-cookie.js?38477214"></script>
+	<script src="//play.pokemonshowdown.com/js/lib/html-sanitizer-minified.js?949c4200"></script>
+	<script src="//play.pokemonshowdown.com/js/battle-sound.js?8e5efe0f"></script>
+	<script src="//play.pokemonshowdown.com/config/config.js?06ecd93b"></script>
+	<script src="//play.pokemonshowdown.com/js/battledata.js?a03890c3"></script>
+	<script src="//play.pokemonshowdown.com/data/pokedex-mini.js?cc80a635"></script>
+	<script src="//play.pokemonshowdown.com/data/pokedex-mini-bw.js?be8bf4bf"></script>
+	<script src="//play.pokemonshowdown.com/data/graphics.js?d9759c2c"></script>
+	<script src="//play.pokemonshowdown.com/data/pokedex.js?18648d91"></script>
+	<script src="//play.pokemonshowdown.com/data/items.js?93fbc7af"></script>
+	<script src="//play.pokemonshowdown.com/data/moves.js?af3ebeab"></script>
+	<script src="//play.pokemonshowdown.com/data/abilities.js?f5275f07"></script>
+	<script src="//play.pokemonshowdown.com/data/teambuilder-tables.js?1c6ecd4e"></script>
+	<script src="//play.pokemonshowdown.com/js/battle-tooltips.js?48313316"></script>
+	<script src="//play.pokemonshowdown.com/js/battle.js?8b17105f"></script>
+	<script src="/js/replay.js?1e09ceb9"></script>
+
+</body></html>
