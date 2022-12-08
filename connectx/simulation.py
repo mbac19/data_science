@@ -1,15 +1,13 @@
 import math
 import numpy as np
 
+from utils import drop_piece, is_board_full
+
 class Configuration:
     def __init__(self, columns, rows, inarow):
         self.columns = columns
         self.rows = rows
         self.inarow = inarow
-
-
-class InvalidActionException(Exception):
-    pass
 
 
 class Simulation:
@@ -20,59 +18,48 @@ class Simulation:
 
 
     def run(self):
-        board = np.zeros((self.configuration.rows, self.configuration.columns))
+        board = np.zeros((self._configuration.rows, self._configuration.columns), dtype=np.int8)
         actions = []
 
-        while not _is_board_full(board):
-            column = self._agent1.choose_action(board)
-            actions.append(column)
+        while not is_board_full(board):
+            column = self._agent1.choose_action(board, self._configuration)
+            dropped_row = drop_piece(board=board, player=1, column=column)
 
-            if self._drop(board=board, player=1, column=column):
+            if _check_win(board, dropped_row, column, player=1, inarow=self._configuration.inarow):
                 return board, 1, actions
 
-            column = self._agent2.choose_action(board)
             actions.append(column)
-            if self._drop(board=board, player=2, column=column):
+
+            column = self._agent2.choose_action(board, self._configuration)
+            dropped_row = drop_piece(board=board, player=2, column=column)
+
+            if _check_win(board, dropped_row, column, player=2, inarow=self._configuration.inarow):
                 return board, 2, actions
+
+            actions.append(column)
         
         return board, 0, actions
 
 
-    def _drop(self, board, player, column):
-        """
-        Drop a piece in a slot. Returns True if the player has won, False
-    i    otherwise. Raises exception if the slot is full.
-        """
-        count = np.sum(board[:, column] != 0)
 
-        if count == self.configuration.columns:
-            raise InvalidActionException("Cannot drop piece in full column")
+def _check_win(board, row, col, player, inarow):
+    """
+    Check if the indicated player has won. To narrow the search, we indicate
+    a row / column to check for the win condition.
+    """
 
-        board[count, column] = player
+    row_seq = board[row, :] == player
+    
+    if _is_win(row_seq, inarow):
+        return True
 
-        # Now we need to check for a winner. Should check 
-        # TODO: Figure out if player has won.
-        # Need to check 4 directions.
+    col_seq = board[:, col] == player
 
-        col = board[:count, column] == player
+    if _is_win(col_seq, inarow):
+        return True
 
-        if _is_win(col):
-            return True
-
-        row0 = max(0, count - self.configuration.inarow + 1)
-        row1 = min(self.configuration.row, count + self.configuration.inarow)
-        row = board[count, row0:row1] == player
-
-        if _is_win(row):
-            return True
-
-        # TODO: Handle diagonals
-        return False
-
-
-def _is_board_full(board):
-        slots = np.prod(board.shape)
-        return np.sum(board != 0) == slots
+    # TODO: Diagonals 
+    return False
 
 
 def _is_win(seq, inarow):
@@ -82,11 +69,11 @@ def _is_win(seq, inarow):
     count = 0
 
     for el in seq:
-        if el == 1.0:
+        if el == 1:
             count += 1
             if count >= inarow:
                 return True
-        
-        count = 0
+        else:
+            count = 0
 
     return False
