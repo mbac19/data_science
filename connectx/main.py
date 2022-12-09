@@ -2,7 +2,7 @@ import numpy as np
 
 from agents.random_agent import RandomAgent
 from simulation import Configuration, Simulation
-from utils import drop_piece
+from utils import check_win, drop_piece
 
 VAL_TO_CHAR = {
     1: 'X',
@@ -15,6 +15,9 @@ def main():
     sim = Simulation(config, agent1=RandomAgent(), agent2=RandomAgent())
     board, winner, actions = sim.run()
     _print_board(board)
+    # board = np.zeros(10, 10)
+    # drop_piece(board, column=0, player=1)
+    # drop_piece(board, column=0)
 
 
 def _print_board(board):
