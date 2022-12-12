@@ -44,8 +44,54 @@ class TestUtils(unittest.TestCase):
         drop_piece(board, column=3, player=1)
         drop_piece(board, column=4, player=1)
 
-        self.assertTrue(check_win(board, ))
+        last_drop_row = 0
+        last_drop_column = 4
+        self.assertTrue(check_win(board, row=last_drop_row, col=last_drop_column, player=1, inarow=3))
 
+    
+    def test_winning_pattern_col(self):
+        board = np.zeros((5, 5), dtype=np.int8)
+        drop_piece(board, column=1, player=2)
+        drop_piece(board, column=1, player=2)
+        drop_piece(board, column=1, player=2)
+        drop_piece(board, column=1, player=2)
+
+        last_drop_row = 3
+        last_drop_column = 1
+        self.assertTrue(check_win(board, row=last_drop_row, col=last_drop_column, player=2, inarow=4))
+
+    
+    def test_winning_pattern_diag1(self):
+        board = np.zeros((5, 5), dtype=np.int8)
+        drop_piece(board, column=1, player=1)
+        drop_piece(board, column=2, player=2)
+        drop_piece(board, column=2, player=1)
+
+        last_drop_row = 1
+        last_drop_column = 2
+        self.assertTrue(check_win(board, row=last_drop_row, col=last_drop_column, player=1, inarow=2))
+
+    
+    def test_winning_pattern_diag2(self):
+        board = np.zeros((5, 5), dtype=np.int8)
+        drop_piece(board, column=3, player=2)
+        drop_piece(board, column=2, player=1)
+        drop_piece(board, column=2, player=2)
+
+        last_drop_row = 1
+        last_drop_column = 2
+        self.assertTrue(check_win(board, row=last_drop_row, col=last_drop_column, player=2, inarow=2))
+
+
+    def test_diag_pattern_one_short_of_winning(self):
+        board = np.zeros((5, 5), dtype=np.int8)
+        drop_piece(board, column=3, player=2)
+        drop_piece(board, column=2, player=1)
+        drop_piece(board, column=2, player=2)
+
+        last_drop_row = 1
+        last_drop_column = 2
+        self.assertFalse(check_win(board, row=last_drop_row, col=last_drop_column, player=2, inarow=3))
 
 
 if __name__ == '__main__':
