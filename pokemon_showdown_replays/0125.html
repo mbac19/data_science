@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html><head>
+
+	<meta charset="utf-8" />
+
+	<title>[Gen 8] Random Battle replay: lisp vs. BishAzz - Pok&eacute;mon Showdown</title>
+
+	<meta name="description" content="Watch a replay of a Pokémon battle between lisp and BishAzz ([Gen 8] Random Battle)" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/font-awesome.css?932f42c7" />
+	<link rel="stylesheet" href="//pokemonshowdown.com/theme/panels.css?0.3873841185823017" />
+	<link rel="stylesheet" href="//pokemonshowdown.com/theme/main.css?0.5229442465521328" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/battle.css?f1b31d7c" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/replay.css?cfa51183" />
+	<link rel="stylesheet" href="//play.pokemonshowdown.com/style/utilichart.css?e39c48cf" />
+
+	<!-- Workarounds for IE bugs to display trees correctly. -->
+	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
+	<!--[if IE 7]><style> li.tree { zoom: 1; } </style><![endif]-->
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-26211653-1']);
+		_gaq.push(['_setDomainName', 'pokemonshowdown.com']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head><body>
+
+	<div class="pfx-topbar">
+		<div class="header">
+			<ul class="nav">
+				<li><a class="button nav-first" href="//pokemonshowdown.com/?0.9394335683894863"><img src="//pokemonshowdown.com/images/pokemonshowdownbeta.png?0.42557986446036966" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
+				<li><a class="button" href="//dex.pokemonshowdown.com/?0.5993419913034967">Pok&eacute;dex</a></li>
+				<li><a class="button cur" href="/?0.8444808934349051">Replays</a></li>
+				<li><a class="button" href="//pokemonshowdown.com/ladder/?0.04844788329256988">Ladder</a></li>
+				<li><a class="button nav-last" href="//pokemonshowdown.com/forums/?0.955307022100162">Forum</a></li>
+			</ul>
+			<ul class="nav nav-play">
+				<li><a class="button greenbutton nav-first nav-last" href="http://play.pokemonshowdown.com/">Play</a></li>
+			</ul>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+	<div class="pfx-panel"><div class="pfx-body" style="max-width:1180px">
+		<div class="wrapper replay-wrapper">
+
+			<div class="battle"><div class="playbutton"><button disabled>Loading...</button></div></div>
+			<div class="battle-log"></div>
+			<div class="replay-controls">
+				<button data-action="start"><i class="fa fa-play"></i> Play</button>
+			</div>
+			<div class="replay-controls-2">
+				<div class="chooser leftchooser speedchooser">
+					<em>Speed:</em>
+					<div><button value="hyperfast">Hyperfast</button> <button value="fast">Fast</button><button value="normal" class="sel">Normal</button><button value="slow">Slow</button><button value="reallyslow">Really Slow</button></div>
+				</div>
+				<div class="chooser colorchooser">
+					<em>Color&nbsp;scheme:</em>
+					<div><button class="sel" value="light">Light</button><button value="dark">Dark</button></div>
+				</div>
+				<div class="chooser soundchooser" style="display:none">
+					<em>Music:</em>
+					<div><button class="sel" value="on">On</button><button value="off">Off</button></div>
+				</div>
+			</div>
+			<!--[if lte IE 8]>
+				<div class="error"><p>&#3232;_&#3232; <strong>You're using an old version of Internet Explorer.</strong></p>
+				<p>We use some transparent backgrounds, rounded corners, and other effects that your old version of IE doesn't support.</p>
+				<p>Please install <em>one</em> of these: <a href="http://www.google.com/chrome">Chrome</a> | <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a> | <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a></p></div>
+			<![endif]-->
+
+			
+			<pre class="urlbox" style="word-wrap: break-word;">https://replay.pokemonshowdown.com/gen8randombattle-1740411551</pre>
+
+			<h1 style="font-weight:normal;text-align:left"><strong>[Gen 8] Random Battle</strong>: <a href="//pokemonshowdown.com/users/lisp" class="subtle">lisp</a> vs. <a href="//pokemonshowdown.com/users/bishazz" class="subtle">BishAzz</a></h1>
+			<p style="padding:0 1em;margin-top:0">
+				<small class="uploaddate" data-timestamp="1670945959"><em>Uploaded:</em> Dec 13, 2022 | <em>Rating:</em> 1611</small>
+			</p>
+
+			<div id="loopcount"></div>
+		</div>
+
+		<input type="hidden" name="replayid" value="gen8randombattle-1740411551" />
+		<!--
+
+You can get this log directly at https://replay.pokemonshowdown.com/gen8randombattle-1740411551.log
+
+Or with metadata at https://replay.pokemonshowdown.com/gen8randombattle-1740411551.json
+
+Most PS pages you'd want to scrape will have a .json version!
+
+		-->
+		<script type="text/plain" class="log">|j|☆lisp
+|j|☆BishAzz
+|t:|1670945532
+|gametype|singles
+|player|p1|lisp|swimmer|1630
+|player|p2|BishAzz|collector|1640
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|8
+|tier|[Gen 8] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|
+|t:|1670945532
+|start
+|switch|p1a: Slurpuff|Slurpuff, L80, F|262\/262
+|switch|p2a: Porygon2|Porygon2, L82|274\/274
+|-ability|p2a: Porygon2|Unburden|[from] ability: Trace|[of] p1a: Slurpuff
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by lisp)
+|
+|t:|1670945551
+|switch|p1a: Conkeldurr|Conkeldurr, L80, M|299\/299
+|move|p2a: Porygon2|Toxic|p1a: Conkeldurr|[miss]
+|-miss|p2a: Porygon2|p1a: Conkeldurr
+|
+|-status|p1a: Conkeldurr|brn|[from] item: Flame Orb
+|upkeep
+|turn|2
+|
+|t:|1670945559
+|switch|p2a: Azumarill|Azumarill, L84, M|305\/305
+|move|p1a: Conkeldurr|Knock Off|p2a: Azumarill
+|-resisted|p2a: Azumarill
+|-damage|p2a: Azumarill|235\/305
+|-enditem|p2a: Azumarill|Choice Band|[from] move: Knock Off|[of] p1a: Conkeldurr
+|
+|-damage|p1a: Conkeldurr|281\/299 brn|[from] brn
+|upkeep
+|turn|3
+|
+|t:|1670945566
+|switch|p1a: Gourgeist|Gourgeist, L84, F|246\/246
+|move|p2a: Azumarill|Play Rough|p1a: Gourgeist|[miss]
+|-miss|p2a: Azumarill|p1a: Gourgeist
+|
+|upkeep
+|turn|4
+|
+|t:|1670945571
+|move|p1a: Gourgeist|Will-O-Wisp|p2a: Azumarill
+|-status|p2a: Azumarill|brn
+|move|p2a: Azumarill|Knock Off|p1a: Gourgeist
+|-supereffective|p1a: Gourgeist
+|-damage|p1a: Gourgeist|177\/246
+|-enditem|p1a: Gourgeist|Leftovers|[from] move: Knock Off|[of] p2a: Azumarill
+|
+|-damage|p2a: Azumarill|216\/305 brn|[from] brn
+|upkeep
+|turn|5
+|
+|t:|1670945581
+|move|p1a: Gourgeist|Poltergeist||[still]
+|-fail|p1a: Gourgeist
+|move|p2a: Azumarill|Play Rough|p1a: Gourgeist
+|-damage|p1a: Gourgeist|135\/246
+|
+|-damage|p2a: Azumarill|197\/305 brn|[from] brn
+|upkeep
+|turn|6
+|c|☆BishAzz|surprised my knock off landed
+|
+|t:|1670945588
+|move|p1a: Gourgeist|Synthesis|p1a: Gourgeist
+|-heal|p1a: Gourgeist|246\/246
+|move|p2a: Azumarill|Play Rough|p1a: Gourgeist
+|-damage|p1a: Gourgeist|197\/246
+|-unboost|p1a: Gourgeist|atk|1
+|
+|-damage|p2a: Azumarill|178\/305 brn|[from] brn
+|upkeep
+|turn|7
+|
+|t:|1670945591
+|move|p1a: Gourgeist|Shadow Sneak|p2a: Azumarill
+|-damage|p2a: Azumarill|145\/305 brn
+|move|p2a: Azumarill|Play Rough|p1a: Gourgeist
+|-damage|p1a: Gourgeist|152\/246
+|
+|-damage|p2a: Azumarill|126\/305 brn|[from] brn
+|upkeep
+|turn|8
+|
+|t:|1670945593
+|move|p1a: Gourgeist|Shadow Sneak|p2a: Azumarill
+|-damage|p2a: Azumarill|96\/305 brn
+|move|p2a: Azumarill|Play Rough|p1a: Gourgeist
+|-damage|p1a: Gourgeist|106\/246
+|
+|-damage|p2a: Azumarill|77\/305 brn|[from] brn
+|upkeep
+|turn|9
+|
+|t:|1670945602
+|move|p1a: Gourgeist|Synthesis|p1a: Gourgeist
+|-heal|p1a: Gourgeist|229\/246
+|move|p2a: Azumarill|Play Rough|p1a: Gourgeist
+|-damage|p1a: Gourgeist|183\/246
+|
+|-damage|p2a: Azumarill|58\/305 brn|[from] brn
+|upkeep
+|turn|10
+|
+|t:|1670945608
+|move|p1a: Gourgeist|Shadow Sneak|p2a: Azumarill
+|-damage|p2a: Azumarill|28\/305 brn
+|move|p2a: Azumarill|Play Rough|p1a: Gourgeist|[miss]
+|-miss|p2a: Azumarill|p1a: Gourgeist
+|
+|-damage|p2a: Azumarill|9\/305 brn|[from] brn
+|upkeep
+|turn|11
+|
+|t:|1670945613
+|move|p1a: Gourgeist|Shadow Sneak|p2a: Azumarill
+|-crit|p2a: Azumarill
+|-damage|p2a: Azumarill|0 fnt
+|faint|p2a: Azumarill
+|
+|upkeep
+|
+|t:|1670945633
+|switch|p2a: Flareon|Flareon, L86, M|251\/251
+|turn|12
+|inactive|lisp has 120 seconds left.
+|inactive|lisp has 90 seconds left.
+|
+|t:|1670945694
+|switch|p1a: Octillery|Octillery, L86, F|269\/269
+|move|p2a: Flareon|Flare Blitz|p1a: Octillery
+|-resisted|p1a: Octillery
+|-damage|p1a: Octillery|183\/269
+|-damage|p2a: Flareon|223\/251|[from] Recoil
+|
+|-heal|p1a: Octillery|199\/269|[from] item: Leftovers
+|-status|p2a: Flareon|tox|[from] item: Toxic Orb
+|-ability|p1a: Octillery|Moody|boost
+|-boost|p1a: Octillery|atk|2
+|-unboost|p1a: Octillery|spd|1
+|upkeep
+|turn|13
+|
+|t:|1670945701
+|move|p2a: Flareon|Facade|p1a: Octillery
+|-damage|p1a: Octillery|1\/269
+|move|p1a: Octillery|Hydro Pump|p2a: Flareon
+|-supereffective|p2a: Flareon
+|-damage|p2a: Flareon|25\/251 tox
+|
+|-heal|p1a: Octillery|17\/269|[from] item: Leftovers
+|-damage|p2a: Flareon|10\/251 tox|[from] psn
+|-ability|p1a: Octillery|Moody|boost
+|-boost|p1a: Octillery|atk|2
+|-unboost|p1a: Octillery|spa|1
+|upkeep
+|turn|14
+|inactive|lisp has 90 seconds left.
+|
+|t:|1670945742
+|move|p1a: Octillery|Protect|p1a: Octillery
+|-singleturn|p1a: Octillery|Protect
+|move|p2a: Flareon|Flare Blitz|p1a: Octillery
+|-activate|p1a: Octillery|move: Protect
+|
+|-heal|p1a: Octillery|33\/269|[from] item: Leftovers
+|-damage|p2a: Flareon|0 fnt|[from] psn
+|faint|p2a: Flareon
+|-ability|p1a: Octillery|Moody|boost
+|-boost|p1a: Octillery|spe|2
+|-unboost|p1a: Octillery|spd|1
+|upkeep
+|
+|t:|1670945761
+|switch|p2a: Porygon2|Porygon2, L82|274\/274
+|-ability|p2a: Porygon2|Moody|[from] ability: Trace|[of] p1a: Octillery
+|turn|15
+|inactive|lisp has 60 seconds left.
+|
+|t:|1670945790
+|move|p1a: Octillery|Hydro Pump|p2a: Porygon2
+|-damage|p2a: Porygon2|217\/274
+|move|p2a: Porygon2|Tri Attack|p1a: Octillery
+|-damage|p1a: Octillery|0 fnt
+|faint|p1a: Octillery
+|
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|spe|2
+|-unboost|p2a: Porygon2|spd|1
+|upkeep
+|inactive|lisp has 60 seconds left.
+|
+|t:|1670945796
+|switch|p1a: Conkeldurr|Conkeldurr, L80, M|281\/299 brn
+|turn|16
+|
+|t:|1670945811
+|move|p2a: Porygon2|Tri Attack|p1a: Conkeldurr
+|-damage|p1a: Conkeldurr|175\/299 brn
+|move|p1a: Conkeldurr|Knock Off|p2a: Porygon2
+|-damage|p2a: Porygon2|130\/274
+|-enditem|p2a: Porygon2|Eviolite|[from] move: Knock Off|[of] p1a: Conkeldurr
+|
+|-damage|p1a: Conkeldurr|157\/299 brn|[from] brn
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|spa|2
+|-unboost|p2a: Porygon2|spd|1
+|upkeep
+|turn|17
+|inactive|lisp has 60 seconds left.
+|
+|t:|1670945847
+|move|p2a: Porygon2|Tri Attack|p1a: Conkeldurr
+|-damage|p1a: Conkeldurr|0 fnt
+|faint|p1a: Conkeldurr
+|
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|spe|2
+|-unboost|p2a: Porygon2|spd|1
+|upkeep
+|
+|t:|1670945858
+|switch|p1a: Moltres|Moltres-Galar, L75|259\/259
+|turn|18
+|
+|t:|1670945863
+|move|p2a: Porygon2|Discharge|p1a: Moltres
+|-supereffective|p1a: Moltres
+|-damage|p1a: Moltres|57\/259
+|-status|p1a: Moltres|par
+|-ability|p1a: Moltres|Berserk|boost
+|-boost|p1a: Moltres|spa|1
+|cant|p1a: Moltres|par
+|
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|spe|2
+|-unboost|p2a: Porygon2|atk|1
+|upkeep
+|turn|19
+|
+|t:|1670945870
+|move|p2a: Porygon2|Discharge|p1a: Moltres
+|-supereffective|p1a: Moltres
+|-damage|p1a: Moltres|0 fnt
+|faint|p1a: Moltres
+|
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|def|2
+|-unboost|p2a: Porygon2|spa|1
+|upkeep
+|
+|t:|1670945881
+|switch|p1a: Slurpuff|Slurpuff, L80, F|262\/262
+|turn|20
+|
+|t:|1670945884
+|move|p2a: Porygon2|Tri Attack|p1a: Slurpuff
+|-damage|p1a: Slurpuff|123\/262
+|-enditem|p1a: Slurpuff|Sitrus Berry|[eat]
+|-heal|p1a: Slurpuff|188\/262|[from] item: Sitrus Berry
+|move|p1a: Slurpuff|Belly Drum|p1a: Slurpuff
+|-damage|p1a: Slurpuff|57\/262
+|-setboost|p1a: Slurpuff|atk|6|[from] move: Belly Drum
+|
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|atk|2
+|-unboost|p2a: Porygon2|spd|1
+|upkeep
+|turn|21
+|
+|t:|1670945893
+|move|p2a: Porygon2|Tri Attack|p1a: Slurpuff
+|-damage|p1a: Slurpuff|0 fnt
+|faint|p1a: Slurpuff
+|
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|def|2
+|-unboost|p2a: Porygon2|spd|1
+|upkeep
+|c|☆BishAzz|gg  wp
+|
+|t:|1670945897
+|switch|p1a: Urshifu|Urshifu-Rapid-Strike, L78, F|284\/284
+|turn|22
+|
+|t:|1670945902
+|-start|p1a: Urshifu|Dynamax|
+|-heal|p1a: Urshifu|568\/568|[silent]
+|move|p2a: Porygon2|Discharge|p1a: Urshifu
+|-supereffective|p1a: Urshifu
+|-damage|p1a: Urshifu|338\/568
+|-status|p1a: Urshifu|par
+|move|p1a: Urshifu|Max Knuckle|p2a: Porygon2
+|-supereffective|p2a: Porygon2
+|-damage|p2a: Porygon2|64\/274
+|-boost|p1a: Urshifu|atk|1
+|
+|-heal|p1a: Urshifu|355\/568 par|[from] item: Leftovers
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|spa|2
+|-unboost|p2a: Porygon2|atk|1
+|upkeep
+|turn|23
+|
+|t:|1670945911
+|move|p2a: Porygon2|Recover|p2a: Porygon2
+|-heal|p2a: Porygon2|201\/274
+|move|p1a: Urshifu|Max Knuckle|p2a: Porygon2
+|-supereffective|p2a: Porygon2
+|-damage|p2a: Porygon2|85\/274
+|-boost|p1a: Urshifu|atk|1
+|
+|-heal|p1a: Urshifu|372\/568 par|[from] item: Leftovers
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|def|2
+|-unboost|p2a: Porygon2|spe|1
+|upkeep
+|turn|24
+|
+|t:|1670945915
+|move|p2a: Porygon2|Recover|p2a: Porygon2
+|-heal|p2a: Porygon2|222\/274
+|move|p1a: Urshifu|Max Knuckle|p2a: Porygon2
+|-supereffective|p2a: Porygon2
+|-damage|p2a: Porygon2|108\/274
+|-boost|p1a: Urshifu|atk|1
+|
+|-heal|p1a: Urshifu|389\/568 par|[from] item: Leftovers
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|atk|2
+|-unboost|p2a: Porygon2|spa|1
+|upkeep
+|-end|p1a: Urshifu|Dynamax
+|-heal|p1a: Urshifu|195\/284 par|[silent]
+|turn|25
+|
+|t:|1670945921
+|move|p2a: Porygon2|Discharge|p1a: Urshifu
+|-supereffective|p1a: Urshifu
+|-damage|p1a: Urshifu|0 fnt
+|faint|p1a: Urshifu
+|
+|-ability|p2a: Porygon2|Moody|boost
+|-boost|p2a: Porygon2|spa|2
+|-unboost|p2a: Porygon2|spd|1
+|upkeep
+|-message|lisp forfeited.
+|
+|win|BishAzz
+|raw|lisp's rating: 1630 &rarr; <strong>1611<\/strong><br \/>(-19 for losing)
+|raw|BishAzz's rating: 1640 &rarr; <strong>1659<\/strong><br \/>(+19 for winning)
+|l|☆lisp
+||Ladder isn't responding, score probably updated but might not have (Request timeout).
+</script>
+
+		<script type="text/plain" class="inputlog">>version fd1fa2b53d8fdf5aeb4c3a0169e085122807b135
+>start {"formatid":"gen8randombattle","seed":[41606,34814,29473,64082],"rated":"Rated battle"}
+>player p1 {"name":"lisp","avatar":"swimmer","rating":1630,"seed":[27459,54670,54500,11667]}
+>player p2 {"name":"BishAzz","avatar":"collector","rating":1640,"seed":[43149,16612,53072,21957]}
+>p1 switch 3
+>p2 move toxic
+>p1 move knockoff
+>p2 switch 6
+>p1 switch 2
+>p2 move playrough
+>p1 move willowisp
+>p2 move knockoff
+>p1 move poltergeist
+>p2 move playrough
+>chat ☆BishAzz|surprised my knock off landed
+>p1 move synthesis
+>p2 move playrough
+>p1 move shadowsneak
+>p2 move playrough
+>p1 move shadowsneak
+>p2 move playrough
+>p1 move synthesis
+>p2 move playrough
+>p1 move shadowsneak
+>p2 move playrough
+>p1 move shadowsneak
+>p2 move aquajet
+>p2 switch 4
+>p1 switch 4
+>p2 move flareblitz
+>p1 move hydropump
+>p2 move facade
+>p1 move protect
+>p2 move flareblitz
+>p2 switch 6
+>p1 move hydropump
+>p2 move triattack
+>p1 switch 2
+>p1 move knockoff
+>p2 move triattack
+>p1 move closecombat
+>p2 move triattack
+>p1 switch 6
+>p1 move hurricane
+>p2 move discharge
+>p1 move rest
+>p2 move discharge
+>p1 switch 3
+>p1 move bellydrum
+>p2 move triattack
+>p1 move playrough
+>p2 move triattack
+>chat ☆BishAzz|gg  wp
+>p1 switch 5
+>p1 move drainpunch dynamax
+>p2 move discharge
+>p1 move drainpunch dynamax
+>p2 move recover
+>p1 move drainpunch dynamax
+>p2 move recover
+>p1 move surgingstrikes
+>p2 move discharge
+>forcelose p1</script>
+
+<div><script>
+google_ad_client = "ca-pub-6535472412829264";
+/* PS replay */
+google_ad_slot = "6865298132";
+google_ad_width = 728;
+google_ad_height = 90;
+</script>
+<script src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+		<a href="/" class="pfx-backbutton" data-target="back"><i class="fa fa-chevron-left"></i> More replays</a>
+
+	</div></div>
+	<script src="//play.pokemonshowdown.com/js/lib/jquery-1.11.0.min.js?8fc25e27"></script>
+	<script src="//play.pokemonshowdown.com/js/lib/lodash.core.js?e9be4c2d"></script>
+	<script src="//play.pokemonshowdown.com/js/lib/backbone.js?8a8d8296"></script>
+	<script src="//dex.pokemonshowdown.com/js/panels.js?0.21428004695715286"></script>
+
+	<script src="//play.pokemonshowdown.com/js/lib/jquery-cookie.js?38477214"></script>
+	<script src="//play.pokemonshowdown.com/js/lib/html-sanitizer-minified.js?949c4200"></script>
+	<script src="//play.pokemonshowdown.com/js/battle-sound.js?8e5efe0f"></script>
+	<script src="//play.pokemonshowdown.com/config/config.js?5082d988"></script>
+	<script src="//play.pokemonshowdown.com/js/battledata.js?c26c04db"></script>
+	<script src="//play.pokemonshowdown.com/data/pokedex-mini.js?cc80a635"></script>
+	<script src="//play.pokemonshowdown.com/data/pokedex-mini-bw.js?be8bf4bf"></script>
+	<script src="//play.pokemonshowdown.com/data/graphics.js?81be098d"></script>
+	<script src="//play.pokemonshowdown.com/data/pokedex.js?3315d893"></script>
+	<script src="//play.pokemonshowdown.com/data/items.js?cb57a0cd"></script>
+	<script src="//play.pokemonshowdown.com/data/moves.js?ec1869c0"></script>
+	<script src="//play.pokemonshowdown.com/data/abilities.js?f5275f07"></script>
+	<script src="//play.pokemonshowdown.com/data/teambuilder-tables.js?5a1c2f4a"></script>
+	<script src="//play.pokemonshowdown.com/js/battle-tooltips.js?fdf0321f"></script>
+	<script src="//play.pokemonshowdown.com/js/battle.js?2208e3d0"></script>
+	<script src="/js/replay.js?1e09ceb9"></script>
+
+</body></html>

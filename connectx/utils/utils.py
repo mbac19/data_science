@@ -49,7 +49,7 @@ def undo_drop_piece(board, column, player):
 
 def possible_moves(board):
     col_count = np.shape(board)[1]
-    return [x for x in range(col_count) if is_board_col_full(board, x)]
+    return [x for x in range(col_count) if not is_board_col_full(board, x)]
 
 
 def check_win(board, row, col, player, inarow):

@@ -27,7 +27,7 @@ class Simulation:
 
 
     def run(self):
-        config = self.conf
+        config = self.config
 
         first_move_agent = self.first_move_agent
         first_move_agent_label = self.first_move_agent_label
@@ -37,6 +37,9 @@ class Simulation:
 
         board = np.zeros((config.rows, config.columns), dtype=np.int8)
         actions = []
+
+        first_move_agent.start_run(player=first_move_agent_label)
+        second_move_agent.start_run(player=second_move_agent_label)
 
         while True:
             column = first_move_agent.choose_action(board, config)

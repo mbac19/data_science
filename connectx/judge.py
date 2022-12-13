@@ -10,7 +10,7 @@ class Judge:
 
 
     def run(self, runs_per_config):
-        column_names = ['row_count', 'col_count', 'inarow', 'agent_1_starts', 'agent_1_wins', 'agent_2_wins', 'ties']
+        column_names = ['agent1_name', 'agent2_name', 'row_count', 'col_count', 'inarow', 'agent_1_starts', 'agent_1_wins', 'agent_2_wins', 'ties']
 
         rows = []
     
@@ -31,6 +31,8 @@ class Judge:
                     agent2_win_count += 1
             
             rows.append([
+                self._agent1.name,
+                self._agent2.name,
                 config.rows,
                 config.columns,
                 config.inarow,
