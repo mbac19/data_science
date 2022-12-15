@@ -4,6 +4,7 @@ from utils import check_win, drop_piece, is_board_full, possible_moves, toggle_p
 
 class SearchAgent:
     def __init__(self, search_depth):
+        assert(search_depth > 0)
         self.name = f'Search Agent (depth = {search_depth})'
         self.search_depth = search_depth
 
@@ -15,7 +16,7 @@ class SearchAgent:
     def choose_action(self, board, configuration):
         return self._find_best_move(
             board,
-            self.search_depth,
+            self.search_depth - 1,
             self.player,
             configuration.inarow
         )[0]
@@ -32,7 +33,8 @@ class SearchAgent:
         for column in columns:
             row = drop_piece(board, column=column, player=active_player)
 
-            if check_win(board, row=row, col=column, player=toggle_player(active_player), inarow=inarow):
+            if check_win(board, row=row, col=column, player=active_player, inarow=inarow):
+                undo_drop_piece(board, column=column, player=active_player)
                 return (column, 1)
             elif is_board_full(board):
                 tie_moves.append(column)
@@ -45,17 +47,20 @@ class SearchAgent:
                 # We are negating the value at this particular position. That
                 # is because we are evaluating the position with respect to
                 # the player making the move, which is the opponent.
-                _, value = -self._find_best_move(
+                value = -self._find_best_move(
                     board=board,
                     depth=depth - 1,
                     active_player=toggle_player(active_player),
                     inarow=inarow
-                )
+                )[1]
 
                 # The opponent only saw losing moves when looking ahead from
                 # this move. This is a winning move.
                 if value == 1:
+                    undo_drop_piece(board, column=column, player=active_player)
                     return (column, 1)
+                elif value == 0:
+                    unknown_moves.append(column)
 
             # Undo the changes we made to the board as we evaluated the subtree
             # of games from this point on. Allows us to explore subtree without
@@ -69,5 +74,5 @@ class SearchAgent:
             return (unknown_moves[0], 0)
 
         # No wins, ties, or unknown outcomes. We are in a losing position.
-        return (0, -1)
+        return (columns[0], -1)
         

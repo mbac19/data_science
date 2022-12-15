@@ -9,6 +9,10 @@ class Configuration:
         self.inarow = inarow
         self.first_move_agent = first_move_agent
 
+    
+    def make_empty_board(self):
+        return np.zeros((self.rows, self.columns), dtype=np.int8)
+
 
 class Simulation:
     def __init__(self, config, agent1, agent2):
@@ -35,11 +39,13 @@ class Simulation:
         second_move_agent = self.second_move_agent
         second_move_agent_label = self.second_move_agent_label
 
-        board = np.zeros((config.rows, config.columns), dtype=np.int8)
+        board = config.make_empty_board()
         actions = []
 
         first_move_agent.start_run(player=first_move_agent_label)
         second_move_agent.start_run(player=second_move_agent_label)
+
+        stats = {'agent1_avg_time_per_move': 0, 'agent2_avg_time_per_move': 0}
 
         while True:
             column = first_move_agent.choose_action(board, config)
@@ -47,17 +53,17 @@ class Simulation:
             actions.append(column)
 
             if check_win(board, row=dropped_row, col=column, player=first_move_agent_label, inarow=config.inarow):
-                return board, first_move_agent_label, actions
+                return board, first_move_agent_label, actions, stats
 
             if is_board_full(board):
-                return board, 0, actions
+                return board, 0, actions, stats
             
             column = second_move_agent.choose_action(board, config)
             dropped_row = drop_piece(board=board, player=second_move_agent_label, column=column)
             actions.append(column)
 
             if check_win(board, dropped_row, column, player=second_move_agent_label, inarow=config.inarow):
-                return board, second_move_agent_label, actions
+                return board, second_move_agent_label, actions, stats
 
             if is_board_full(board):
-                return board, 0, actions
+                return board, 0, actions, stats

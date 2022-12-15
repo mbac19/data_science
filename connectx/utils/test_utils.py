@@ -1,7 +1,7 @@
 import numpy as np
 import unittest
 
-from utils import check_win, drop_piece
+from utils import check_win, drop_piece, possible_moves
 
 class TestUtils(unittest.TestCase):
     def test_drop_piece_in_empty_board(self):
@@ -92,6 +92,19 @@ class TestUtils(unittest.TestCase):
         last_drop_row = 1
         last_drop_column = 2
         self.assertFalse(check_win(board, row=last_drop_row, col=last_drop_column, player=2, inarow=3))
+
+    
+    def test_returns_all_columns_as_possible_moves_on_empty_board(self):
+        board = np.zeros((5, 5), dtype=np.int8)
+        cols = possible_moves(board)
+        self.assertEqual(cols, [x for x in range(5)])
+
+    
+    def test_does_not_return_full_column_as_possible_moves(self):
+        board = np.zeros((10, 10), dtype=np.int8)
+        board[:, 0] = [1 for _ in range(10)]
+        cols = possible_moves(board)
+        self.assertEqual(cols, [x for x in range(1, 10)])
 
 
 if __name__ == '__main__':

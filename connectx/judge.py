@@ -9,8 +9,20 @@ class Judge:
         self._configs = configs
 
 
-    def run(self, runs_per_config):
-        column_names = ['agent1_name', 'agent2_name', 'row_count', 'col_count', 'inarow', 'agent_1_starts', 'agent_1_wins', 'agent_2_wins', 'ties']
+    def run(self, runs_per_config, log=True):
+        column_names = [
+            'agent1_name',
+            'agent2_name',
+            'row_count',
+            'col_count',
+            'inarow',
+            'agent_1_starts',
+            'agent_1_wins',
+            'agent_2_wins',
+            'ties',
+            'agent_1_avg_time_move',
+            'agent_2_avg_time_move'
+        ]
 
         rows = []
     
@@ -20,6 +32,9 @@ class Judge:
             tie_count = 0
 
             for _ in range(runs_per_config):
+                if log:
+                    print(f'Starting New Simulation')
+        
                 sim = Simulation(config, agent1=self._agent1, agent2=self._agent2)
                 _, winner, _ = sim.run()
 

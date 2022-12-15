@@ -1,5 +1,10 @@
 import numpy as np
 
+VAL_TO_CHAR = {
+    1: 'X',
+    2: 'O',
+    0: '•',
+}
 
 class InvalidActionException(Exception):
     pass
@@ -38,7 +43,7 @@ def undo_drop_piece(board, column, player):
     If the top piece in that column is from a different player, or there
     are no pieces in that column, this will raise an exception.
     """
-    count = np.sum(board[:, column])
+    count = np.sum(board[:, column] != 0)
 
     if count == 0 or board[count - 1, column] != player:
         raise InvalidActionException("Cannot undo piece drop")
