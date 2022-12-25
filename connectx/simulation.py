@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 from utils import check_win, drop_piece, is_board_full
 
@@ -45,12 +46,20 @@ class Simulation:
         first_move_agent.start_run(player=first_move_agent_label)
         second_move_agent.start_run(player=second_move_agent_label)
 
-        stats = {'agent1_avg_time_per_move': 0, 'agent2_avg_time_per_move': 0}
+        stats = {'avg_move_time': [0.0, 0.0], 'move_count': 1}
 
         while True:
+            n = stats['move_count']
+
+            start = time.time()
             column = first_move_agent.choose_action(board, config)
+            end = time.time()
+
             dropped_row = drop_piece(board=board, player=first_move_agent_label, column=column)
             actions.append(column)
+
+            delta_time = end - start
+            stats['avg_move_time'][first_move_agent_label - 1] = stats['avg_move_time'][first_move_agent_label - 1] + 1.0 / n * (delta_time - stats['avg_move_time'][first_move_agent_label - 1])
 
             if check_win(board, row=dropped_row, col=column, player=first_move_agent_label, inarow=config.inarow):
                 return board, first_move_agent_label, actions, stats
@@ -58,12 +67,20 @@ class Simulation:
             if is_board_full(board):
                 return board, 0, actions, stats
             
+            start = time.time() 
             column = second_move_agent.choose_action(board, config)
+            end = time.time()
+
             dropped_row = drop_piece(board=board, player=second_move_agent_label, column=column)
             actions.append(column)
+
+            delta_time = end - start
+            stats['avg_move_time'][second_move_agent_label - 1] = stats['avg_move_time'][second_move_agent_label - 1] + 1.0 / n * (delta_time - stats['avg_move_time'][second_move_agent_label - 1])
 
             if check_win(board, dropped_row, column, player=second_move_agent_label, inarow=config.inarow):
                 return board, second_move_agent_label, actions, stats
 
             if is_board_full(board):
                 return board, 0, actions, stats
+
+            stats['move_count'] += 1
